@@ -1,12 +1,13 @@
 {
   "name": "portfolio",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "esbuild": "ngc-esbuild --minify true --sourcemap false --port 4200 --open"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +35,7 @@
     "karma-coverage": "~2.1.0",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "ngc-esbuild": "^0.0.75",
     "typescript": "~4.6.2"
   }
 }
