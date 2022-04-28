@@ -53,7 +53,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/normalize.scss",
+              "src/styles/media.scss"
             ],
             "scripts": []
           },

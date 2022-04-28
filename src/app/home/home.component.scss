@@ -1,0 +1,62 @@
+@import '../../styles/media';
+/* @import url(); */
+
+:host {
+  .name {
+    @include for-web {
+      font-size: 3.6rem;
+      color: rgb(75, 85, 99);
+      margin: 4rem 0 0 0;
+      font-family: 'Fredericka the Great';
+    }
+  }
+
+  .description {
+    @include for-web {
+      margin-top: 1rem;
+      font-weight: 500;
+      font-family: 'Aquwawax', sans-serif;
+      font-size: 20px;
+      line-height: 28px;
+      color: rgb(57, 65, 77);
+    }
+  }
+
+  .title {
+    margin-top: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    opacity: 0.7;
+  }
+
+  .articles {
+    list-style-type: none;
+    margin-top: 1rem 0;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    .article {
+      display: flex;
+      align-items: center;
+      padding: 1rem 0;
+
+      p:nth-child(1) {
+        margin-left: -20%;
+        font-size: 0.8rem;
+        opacity: 0.8;
+      }
+
+      p:nth-child(2) {
+        font-size: 1.2rem;
+        position: absolute;
+        border-bottom: 1px solid white;
+        cursor: pointer;
+
+        &:hover {
+          border-bottom: 1px solid rgba(95, 92, 92, 0.363);
+        }
+      }
+    }
+  }
+}

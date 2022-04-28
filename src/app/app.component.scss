@@ -1,0 +1,30 @@
+@import '../styles/media.scss';
+
+header {
+  @include for-web {
+    display: flex;
+    justify-content: center;
+    /* color          : rgb(75, 85, 99); */
+    color: rgb(59, 68, 80);
+    box-shadow: 0 2px 2px 0 rgba(128, 128, 128, 0.075);
+
+    nav {
+      ul {
+        display: flex;
+        list-style-type: none;
+        gap: 2rem;
+        padding: 1rem 0;
+        align-items: center;
+
+        li {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+main {
+  width: 600px;
+  margin: 0 auto;
+}
