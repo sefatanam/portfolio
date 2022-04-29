@@ -22,6 +22,14 @@
       "es2020",
       "dom"
     ],
+    "paths": {
+      "@interceptors/*": [
+        "./src/interceptors/*"
+      ],
+      "@interfaces/*": [
+        "./src/interfaces/*"
+      ]
+    },
     "plugins": [
       {
         "name": "@angular/language-service"

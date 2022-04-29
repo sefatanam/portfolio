@@ -8,7 +8,6 @@
 }
 
 @mixin base-description {
-
   color      : var(--primaryTextColor);
   font-weight: 400;
   line-height: 28px;
@@ -21,75 +20,73 @@
 }
 
 @mixin base-title {
-
   font-weight: 400;
   opacity    : 0.7;
 }
 
 @mixin base-article($align-items, $pMargin, $pPosition, $mFlexDirection, $mGap) {
+  align-items   : $align-items;
+  display       : flex;
+  padding       : 1rem 0;
+  flex-direction: $mFlexDirection;
+  gap           : $mGap;
 
-  list-style-type: none;
-  text-align     : left;
+  p {
+    font-size  : 0.8em;
+    margin-left: $pMargin;
+    opacity    : 0.8;
+  }
 
-  .article {
+  a {
+    border-bottom  : 1px solid white;
+    color          : var(--primaryTextColor);
+    cursor         : pointer;
+    position       : $pPosition;
+    text-decoration: none;
 
-    align-items: $align-items;
-    display    : flex;
-    padding    : 1rem 0;
-
-    flex-direction: $mFlexDirection;
-    gap           : $mGap;
-
-    p {
-      font-size  : 0.8em;
-      margin-left: $pMargin;
-      opacity    : 0.8;
-    }
-
-    a {
-      border-bottom  : 1px solid white;
-      color          : var(--primaryTextColor);
-      cursor         : pointer;
-      position       : $pPosition;
-      text-decoration: none;
-
-      &:hover {
-        border-bottom: 1px solid var(--primaryTextColor);
-      }
+    &:hover {
+      border-bottom: 1px solid var(--primaryTextColor);
     }
   }
 }
 
 :host {
 
+  --primaryTextColor: rgb(75, 85, 99);
+
   &>* {
     @include base-text;
     margin-top: 1rem;
   }
 
-  --primaryTextColor: rgb(75, 85, 99);
-
-  .name {
-    @include base-name;
-  }
-
-  .description {
-    @include base-description;
-  }
-
-  .title {
-    @include base-title;
-  }
-
-  .articles {
-    @include for-web {
-      @include base-article(center, -20%, absolute, row, 0)
+  .developer {
+    &_name {
+      @include base-name;
     }
 
-    @include for-phone {
-      @include base-article(left, 0%, relative, column, 0.2)
+    &_description {
+      @include base-description;
+    }
+
+    &_title {
+      @include base-title;
+    }
+
+    &_article {
+
+      &_wrapper {
+        list-style-type: none;
+      }
+
+      &_container {
+        @include for-web {
+          @include base-article(center, -20%, absolute, row, 0);
+        }
+
+        @include for-phone {
+          @include base-article(left, 0%, relative, column, 0.2);
+        }
+      }
     }
   }
-
-
 }
