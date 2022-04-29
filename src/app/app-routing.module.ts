@@ -9,6 +9,11 @@ const routes: Routes = [
   {
     path: 'portfolio',
     loadChildren: () => import('./info/info.module').then((m) => m.InfoModule)
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
   }
 ];
 

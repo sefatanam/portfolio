@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "esbuild": "ngc-esbuild --minify true --sourcemap false --port 4200 --open",
+    "esbuild": "ngc-esbuild --minify true --sourcemap false --port 6500 --open",
     "lint": "npx eslint src/**/*.{ts,html} --quiet --fix",
     "format": "npx prettier src/**/*.{ts,html} --write",
     "prepare": "husky install"

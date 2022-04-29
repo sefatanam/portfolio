@@ -1,62 +1,95 @@
 @import '../../styles/media';
-/* @import url(); */
+
+@mixin base-name {
+  color      : var(--primaryTextColor);
+  font-family: 'Fredericka the Great';
+  font-size  : 3.5em;
+  margin-top : 4rem;
+}
+
+@mixin base-description {
+
+  color      : var(--primaryTextColor);
+  font-weight: 400;
+  line-height: 28px;
+  font-size  : 1.2em;
+}
+
+@mixin base-text {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size  : 1.2em;
+}
+
+@mixin base-title {
+
+  font-weight: 400;
+  opacity    : 0.7;
+}
+
+@mixin base-article($align-items, $pMargin, $pPosition, $mFlexDirection, $mGap) {
+
+  list-style-type: none;
+  text-align     : left;
+
+  .article {
+
+    align-items: $align-items;
+    display    : flex;
+    padding    : 1rem 0;
+
+    flex-direction: $mFlexDirection;
+    gap           : $mGap;
+
+    p {
+      font-size  : 0.8em;
+      margin-left: $pMargin;
+      opacity    : 0.8;
+    }
+
+    a {
+      border-bottom  : 1px solid white;
+      color          : var(--primaryTextColor);
+      cursor         : pointer;
+      position       : $pPosition;
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 1px solid var(--primaryTextColor);
+      }
+    }
+  }
+}
 
 :host {
+
+  &>* {
+    @include base-text;
+    margin-top: 1rem;
+  }
+
+  --primaryTextColor: rgb(75, 85, 99);
+
   .name {
-    @include for-web {
-      font-size: 3.6rem;
-      color: rgb(75, 85, 99);
-      margin: 4rem 0 0 0;
-      font-family: 'Fredericka the Great';
-    }
+    @include base-name;
   }
 
   .description {
-    @include for-web {
-      margin-top: 1rem;
-      font-weight: 500;
-      font-family: 'Aquwawax', sans-serif;
-      font-size: 20px;
-      line-height: 28px;
-      color: rgb(57, 65, 77);
-    }
+    @include base-description;
   }
 
   .title {
-    margin-top: 2rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1.1rem;
-    font-weight: 400;
-    opacity: 0.7;
+    @include base-title;
   }
 
   .articles {
-    list-style-type: none;
-    margin-top: 1rem 0;
-    text-align: left;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    @include for-web {
+      @include base-article(center, -20%, absolute, row, 0)
+    }
 
-    .article {
-      display: flex;
-      align-items: center;
-      padding: 1rem 0;
-
-      p:nth-child(1) {
-        margin-left: -20%;
-        font-size: 0.8rem;
-        opacity: 0.8;
-      }
-
-      p:nth-child(2) {
-        font-size: 1.2rem;
-        position: absolute;
-        border-bottom: 1px solid white;
-        cursor: pointer;
-
-        &:hover {
-          border-bottom: 1px solid rgba(95, 92, 92, 0.363);
-        }
-      }
+    @include for-phone {
+      @include base-article(left, 0%, relative, column, 0.2)
     }
   }
+
+
 }

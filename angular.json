@@ -54,7 +54,6 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/normalize.scss",
               "src/styles/media.scss"
             ],
             "scripts": []
@@ -82,9 +81,9 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
-              "optimization": false,
-              "vendorChunk": true,
+              "buildOptimizer": true,
+              "optimization": true,
+              "vendorChunk": false,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true

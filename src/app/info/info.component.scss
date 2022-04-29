@@ -1,18 +1,18 @@
 :host {
   .title {
-    margin-top: 4rem;
-    font-size: 1.5rem;
-    text-align: center;
+    margin-top : 4rem;
+    font-size  : 1.5rem;
+    text-align : center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgba(41, 39, 39, 0.815);
+    color      : rgba(41, 39, 39, 0.815);
   }
 
   .technologies {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 2rem;
-    display: grid;
+    font-family          : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top           : 2rem;
+    display              : grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap                  : 2rem;
 
     .part {
       .name {
@@ -24,7 +24,7 @@
 
         li {
           margin-bottom: 0.3rem;
-          margin-top: 0.3rem;
+          margin-top   : 0.3rem;
 
           &:last-child {
             margin-bottom: 0;
@@ -35,27 +35,27 @@
   }
 
   .histories {
-    margin-top: 4rem;
+    margin-top : 4rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     .history {
-      display: flex;
-      gap: 3rem;
+      display      : flex;
+      gap          : 3rem;
       margin-bottom: 2rem;
 
       .image {
-        height: 100px;
-        width: 100px;
-        overflow: hidden;
+        height       : 100px;
+        width        : 100px;
+        overflow     : hidden;
         border-radius: 50%;
       }
 
       .info {
-        flex: 5;
+        flex       : 5;
         line-height: 1.2rem;
 
         .designation {
-          font-size: 0.9rem;
+          font-size  : 0.9rem;
           font-weight: 600;
         }
 
@@ -68,21 +68,21 @@
         }
 
         ul {
-          margin-top: 2rem;
+          margin-top           : 2rem;
           /* list-style-type   : none; */
-          display: flex;
-          flex-direction: column;
-          gap: 5px;
+          display              : flex;
+          flex-direction       : column;
+          gap                  : 5px;
 
           p {
             font-size: 0.7rem;
-            margin: 1rem 0;
+            margin   : 1rem 0;
           }
 
           li {
             margin-left: 10%;
-            font-size: 0.9rem;
-            position: relative;
+            font-size  : 0.9rem;
+            position   : relative;
 
             /* padding: 2px 20px; */
 
@@ -114,7 +114,7 @@
 
   .educations {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
+    text-align : center;
     line-height: 1.5rem;
 
     .institute {
@@ -128,40 +128,37 @@
         font-size: 1.2rem;
       }
 
-      .name {
-        opacity: 0.7;
-      }
 
       .note {
-        opacity: 0.4;
+
         font-size: 0.8rem;
       }
 
       ul {
-        text-align: left;
-        margin-top: 2rem;
+        text-align           : left;
+        margin-top           : 2rem;
         /* list-style-type   : none; */
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
+        display              : flex;
+        flex-direction       : column;
+        gap                  : 5px;
 
         p {
           font-size: 0.9rem;
-          margin: 1rem 0;
+          margin   : 1rem 0;
         }
 
         li {
           margin-left: 5%;
-          font-size: 0.9rem;
-          position: relative;
+          font-size  : 0.9rem;
+          position   : relative;
         }
       }
     }
   }
 
   footer {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
+    font-family  : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align   : center;
     margin-bottom: 5rem;
 
     p {

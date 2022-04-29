@@ -1,23 +1,31 @@
 @import '../styles/media.scss';
 
 header {
+
+  @include for-phone {
+    display: none;
+  }
+
   @include for-web {
-    display: flex;
+    display        : flex;
     justify-content: center;
-    /* color          : rgb(75, 85, 99); */
-    color: rgb(59, 68, 80);
-    box-shadow: 0 2px 2px 0 rgba(128, 128, 128, 0.075);
+    color          : rgb(59, 68, 80) !important;
+    box-shadow     : 0 2px 2px 0 rgba(128, 128, 128, 0.075);
 
     nav {
       ul {
-        display: flex;
+        display        : flex;
         list-style-type: none;
-        gap: 2rem;
-        padding: 1rem 0;
-        align-items: center;
+        gap            : 2rem;
+        padding        : 1rem 0;
+        align-items    : center;
 
         li {
           cursor: pointer;
+
+          a {
+            color: rgb(59, 68, 80);
+          }
         }
       }
     }
@@ -25,6 +33,12 @@ header {
 }
 
 main {
-  width: 600px;
-  margin: 0 auto;
+  @include for-web {
+    width : 600px;
+    margin: 0 auto;
+  }
+
+  @include for-phone {
+    padding: 1em;
+  }
 }
