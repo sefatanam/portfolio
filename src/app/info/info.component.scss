@@ -1,168 +1,194 @@
+@import "../../styles/media";
+$textPrimaryColor:rgba(94, 94, 94, 0.815);
+
+@mixin base-title {
+  text-align: center;
+  color     : $textPrimaryColor;
+
+  @include for-web {
+    font-size: 1.5rem;
+  }
+
+  @include for-phone {
+    font-size: 1.2em;
+  }
+}
+
 :host {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+  &>* {
+    @include for-phone {
+      margin: 1rem 0;
+    }
+
+    @include for-web {
+      margin: 3rem 0;
+    }
+  }
+
   .title {
-    margin-top : 4rem;
-    font-size  : 1.5rem;
-    text-align : center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color      : rgba(41, 39, 39, 0.815);
+    @include base-title;
   }
 
-  .technologies {
-    font-family          : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top           : 2rem;
-    display              : grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap                  : 2rem;
-
-    .part {
-      .name {
-        color: rgba(41, 39, 39, 0.815);
+  .technology {
+    &_wrapper {
+      @include for-web {
+        display              : grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap                  : 2rem;
       }
 
-      ul {
-        list-style-type: none;
+      @include for-phone {
+        display              : grid;
+        grid-template-columns: repeat(1, 1fr);
+        text-align           : center;
+      }
+    }
 
-        li {
-          margin-bottom: 0.3rem;
-          margin-top   : 0.3rem;
+    &_container {
+      margin: 1em 0;
+    }
 
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }
+    &_name {
+      color        : rgba(41, 39, 39, 0.815);
+      font-size    : 0.8em;
+      margin-bottom: 1em;
+    }
+
+    &_list {
+      list-style-type: none;
+    }
+
+    &_listItem {
+      font-size: 0.9em;
+    }
+  }
+
+
+
+  .employment_history {
+
+    // &_wrapper{}
+
+    &_container {
+      position: relative;
+      display : flex;
+      gap     : 3rem;
+    }
+
+    &_image {
+      overflow     : hidden;
+      border-radius: 50%;
+
+
+      @include for-web {
+        height: 100px;
+        width : 100px;
+      }
+
+      @include for-phone {
+        // height: 50px;
+        // width : 50px;
+        display: none;
+      }
+    }
+
+    &_information {
+      flex       : 1;
+      line-height: 1.2em;
+    }
+
+    &_designation {
+      font-size  : 0.9em;
+      font-weight: 600;
+    }
+
+    &_companyName {
+      font-size      : 0.9em;
+      text-decoration: none;
+      cursor         : pointer;
+    }
+
+    &_duration {
+      font-size: 0.8rem;
+    }
+
+    &_list {
+      display       : flex;
+      flex-direction: column;
+    }
+
+    &_listItem {
+      margin-left: 10%;
+      font-size  : 0.9rem;
+      position   : relative;
+    }
+
+    &_intro {
+      margin: 1em 0;
+
+      @include for-web {
+        font-size: 0.7rem;
+      }
+
+      @include for-phone {
+        font-size: 0.8em;
+        color    : #78848bdc;
+
       }
     }
   }
 
-  .histories {
-    margin-top : 4rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  .education {
 
-    .history {
-      display      : flex;
-      gap          : 3rem;
-      margin-bottom: 2rem;
 
-      .image {
-        height       : 100px;
-        width        : 100px;
-        overflow     : hidden;
-        border-radius: 50%;
-      }
 
-      .info {
-        flex       : 5;
-        line-height: 1.2rem;
+    &_wrapper {
+      text-align : center;
+      line-height: 1.5em;
 
-        .designation {
-          font-size  : 0.9rem;
-          font-weight: 600;
-        }
-
-        .company-name {
-          font-size: 0.9rem;
-        }
-
-        .duration {
-          font-size: 0.8rem;
-        }
-
-        ul {
-          margin-top           : 2rem;
-          /* list-style-type   : none; */
-          display              : flex;
-          flex-direction       : column;
-          gap                  : 5px;
-
-          p {
-            font-size: 0.7rem;
-            margin   : 1rem 0;
-          }
-
-          li {
-            margin-left: 10%;
-            font-size  : 0.9rem;
-            position   : relative;
-
-            /* padding: 2px 20px; */
-
-            /* &::before {
-                            content         : '';
-                            background-color: rgba(80, 73, 73, 0.123);
-                            position        : absolute;
-                            bottom          : 0px;
-                            top             : 0px;
-                            left            : 6px;
-                            width           : 3px;
-                        }
-
-                        &::after {
-                            content      : '';
-                            position     : absolute;
-                            left         : 1px;
-                            top          : 0px;
-                            height       : 12px;
-                            width        : 12px;
-                            background   : rgba(128, 128, 128, 0.788);
-                            border-radius: 50%;
-                        } */
-          }
-        }
+      @include for-phone {
+        display: none;
       }
     }
-  }
 
-  .educations {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align : center;
-    line-height: 1.5rem;
+    // &_container {}
 
-    .institute {
-      margin-top: 2.5rem;
+    &_duration {
+      font-weight: 600;
+    }
 
-      .duration {
-        font-weight: 600;
-      }
+    &_degree {
+      font-size: 1.2em;
+    }
 
-      .designation {
-        font-size: 1.2rem;
-      }
+    &_institute {
+      font-size: 1.2em;
+    }
 
+    &_note {
+      font-size: 0.8em;
+    }
 
-      .note {
+    &_activities {
+      font-size: 0.9em;
+    }
 
-        font-size: 0.8rem;
-      }
+    &_list {
+      text-align    : left;
+      display       : flex;
+      flex-direction: column;
+    }
 
-      ul {
-        text-align           : left;
-        margin-top           : 2rem;
-        /* list-style-type   : none; */
-        display              : flex;
-        flex-direction       : column;
-        gap                  : 5px;
-
-        p {
-          font-size: 0.9rem;
-          margin   : 1rem 0;
-        }
-
-        li {
-          margin-left: 5%;
-          font-size  : 0.9rem;
-          position   : relative;
-        }
-      }
+    &_listItem {
+      font-size: 0.9rem;
+      position : relative;
     }
   }
 
   footer {
-    font-family  : 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align   : center;
-    margin-bottom: 5rem;
-
-    p {
-      margin-top: 1rem;
-    }
+    text-align: center;
   }
 }

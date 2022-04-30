@@ -1,7 +1,7 @@
 /* FOR LAPTOP */
 /* ----------- Retina Screens ----------- */
 @mixin for-web {
-  @media (min-width: 900px) {
+  @media (min-width: 600px) {
     @content;
   }
 }
@@ -9,7 +9,7 @@
 /* FOR PHONE */
 /* Portrait */
 @mixin for-phone {
-  @media (max-width: 899px) {
+  @media (max-width: 600px) {
     @content;
   }
 }

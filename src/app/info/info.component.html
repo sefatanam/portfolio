@@ -1,49 +1,50 @@
 <p class="title">Stuff I Work With</p>
 
-<section class="technologies">
-  <div class="part" *ngFor="let n of [].constructor(6)">
-    <p class="name">Languages</p>
-    <ul>
-      <li>Go</li>
-      <li>Go</li>
-      <li>Go</li>
-      <li>Go</li>
-      <li>Go</li>
+<section class="technology_wrapper">
+  <div
+    class="technology_container"
+    *ngFor="let technology of technologies | async"
+  >
+    <p class="technology_name">{{ technology.type }}</p>
+    <ul class="technology_list">
+      <li class="technology_listItem" *ngFor="let name of technology.list">
+        {{ name }}
+      </li>
     </ul>
   </div>
 </section>
 
 <p class="title">Employment History</p>
 
-<section class="histories">
-  <div class="history" *ngFor="let n of [].constructor(2)">
-    <img class="image" src="../../assets/demo.png" alt="" />
-
-    <div class="info">
-      <p class="designation">Software Engineer</p>
-      <p class="company-name">Metadesign Solutions</p>
-      <p class="duration">March 1, 2022 - Present</p>
-
-      <!-- <ul >
-                <p>CONTRIBUTIONS</p>
-                <li *ngFor="let n of [].constructor(7)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur facilis commodi, et asperiores expedita eius iusto, natus hic exercitationem quia vitae tenetur totam consequuntur quisquam est quam iste eos. Debitis.</li>
-            </ul> -->
-
-      <ul>
-        <p>CONTRIBUTIONS</p>
-        <li>
+<section class="employment_history_wrapper">
+  <div class="employment_history_container" *ngFor="let n of [].constructor(2)">
+    <img class="employment_history_image" src="../../assets/demo.png" alt="" />
+    <div class="employment_history_information">
+      <!-- <img class="employment_history_image" src="../../assets/demo.png" alt="" /> -->
+      <p class="employment_history_designation">Software Engineer</p>
+      <a class="employment_history_companyName" href="">Metadesign Solutions</a>
+      <p class="employment_history_duration">March 1, 2022 - Present</p>
+      <ul class="employment_history_list">
+        <p class="employment_history_intro">CONTRIBUTIONS</p>
+        <li class="employment_history_listItem">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
           quasi sint sed eligendi soluta et nam optio voluptas quia culpa sequi
           veritatis cupiditate praesentium, nesciunt eveniet fugit enim unde
           sit?
         </li>
-        <li>
+        <li class="employment_history_listItem">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
           quasi sint sed eligendi soluta et nam optio voluptas quia culpa sequi
           veritatis cupiditate praesentium, nesciunt eveniet fugit enim unde
           sit?
         </li>
-        <li>
+        <li class="employment_history_listItem">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
+          quasi sint sed eligendi soluta et nam optio voluptas quia culpa sequi
+          veritatis cupiditate praesentium, nesciunt eveniet fugit enim unde
+          sit?
+        </li>
+        <li class="employment_history_listItem">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
           quasi sint sed eligendi soluta et nam optio voluptas quia culpa sequi
           veritatis cupiditate praesentium, nesciunt eveniet fugit enim unde
@@ -56,19 +57,23 @@
 
 <p class="title">Education</p>
 
-<section class="educations">
-  <div class="institute" *ngFor="let n of [2, 3, 4]">
-    <p class="duration">January 2018 - April 2022</p>
-    <p class="designation">Bachelor Of Science In Computer Science (Bsc)</p>
-    <p class="name">Atish Dipankar University of Science & Technology</p>
-    <p class="note">
+<section class="education_wrapper">
+  <div class="education_container" *ngFor="let n of [2, 3, 4]">
+    <p class="education_duration">January 2018 - April 2022</p>
+    <p class="education_degree">
+      Bachelor Of Science In Computer Science (Bsc)
+    </p>
+    <p class="education_institute">
+      Atish Dipankar University of Science & Technology
+    </p>
+    <p class="education_note">
       N/B:Unfortunately, Takes some extra time to complete my graduation for
       university fault.
     </p>
 
-    <ul>
-      <p>Activities</p>
-      <li>
+    <ul class="education_list">
+      <p class="education_activities">Activities</p>
+      <li class="education_listItem">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
         quasi sint sed eligendi soluta et nam optio voluptas quia culpa sequi
         veritatis cupiditate praesentium, nesciunt eveniet fugit enim unde sit?

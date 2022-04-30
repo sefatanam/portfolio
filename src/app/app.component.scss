@@ -2,34 +2,38 @@
 
 header {
 
-  @include for-phone {
-    display: none;
-  }
 
-  @include for-web {
-    display        : flex;
-    justify-content: center;
-    color          : rgb(59, 68, 80) !important;
-    box-shadow     : 0 2px 2px 0 rgba(128, 128, 128, 0.075);
 
-    nav {
-      ul {
-        display        : flex;
-        list-style-type: none;
-        gap            : 2rem;
-        padding        : 1rem 0;
-        align-items    : center;
+  // @include for-web {
+  position       : sticky;
+  top            : 0;
+  left           : 0;
+  z-index        : 1;
+  background     : white;
+  display        : flex;
+  justify-content: center;
+  color          : rgb(59, 68, 80) !important;
+  box-shadow     : 0 2px 2px 0 rgba(128, 128, 128, 0.075);
 
-        li {
-          cursor: pointer;
+  nav {
+    ul {
+      display        : flex;
+      list-style-type: none;
+      gap            : 2rem;
+      padding        : 1rem 0;
+      align-items    : center;
 
-          a {
-            color: rgb(59, 68, 80);
-          }
+      li {
+        cursor: pointer;
+
+        a {
+          color: rgb(59, 68, 80);
         }
       }
     }
   }
+
+  // }
 }
 
 main {
