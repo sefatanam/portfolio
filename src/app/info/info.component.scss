@@ -48,7 +48,7 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
     }
 
     &_container {
-      margin: 1em 0;
+      margin: 3rem 0;
     }
 
     &_name {
@@ -73,9 +73,10 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
     // &_wrapper{}
 
     &_container {
-      position: relative;
-      display : flex;
-      gap     : 3rem;
+      position  : relative;
+      display   : flex;
+      gap       : 3rem;
+      margin-top: 3em;
     }
 
     &_image {
@@ -109,6 +110,7 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
       font-size      : 0.9em;
       text-decoration: none;
       cursor         : pointer;
+      color          : black;
     }
 
     &_duration {
@@ -142,8 +144,9 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
   }
 
   .education {
-
-
+    &>* {
+      margin: 0.5em 0;
+    }
 
     &_wrapper {
       text-align : center;
@@ -154,7 +157,9 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
       }
     }
 
-    // &_container {}
+    &_container {
+      margin: 1rem 0;
+    }
 
     &_duration {
       font-weight: 600;
@@ -164,16 +169,19 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
       font-size: 1.2em;
     }
 
-    &_institute {
-      font-size: 1.2em;
-    }
+    // &_institute {
+    //   font-size: 0.9em;
+    // }
 
     &_note {
       font-size: 0.8em;
     }
 
     &_activities {
-      font-size: 0.9em;
+      font-size     : 0.8em;
+      margin        : 1em 0;
+      text-transform: uppercase;
+
     }
 
     &_list {

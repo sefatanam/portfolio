@@ -17,38 +17,34 @@
 <p class="title">Employment History</p>
 
 <section class="employment_history_wrapper">
-  <div class="employment_history_container" *ngFor="let n of [].constructor(2)">
-    <img class="employment_history_image" src="../../assets/demo.png" alt="" />
+  <div
+    class="employment_history_container"
+    *ngFor="let employmentHistory of employmentHistories | async"
+  >
+    <img
+      class="employment_history_image"
+      [src]="employmentHistory.companyLogo"
+      [alt]="employmentHistory.companyName"
+    />
     <div class="employment_history_information">
-      <!-- <img class="employment_history_image" src="../../assets/demo.png" alt="" /> -->
-      <p class="employment_history_designation">Software Engineer</p>
-      <a class="employment_history_companyName" href="">Metadesign Solutions</a>
-      <p class="employment_history_duration">March 1, 2022 - Present</p>
+      <p class="employment_history_designation">
+        {{ employmentHistory.designation }}
+      </p>
+      <a
+        class="employment_history_companyName"
+        [href]="employmentHistory.companyUrl"
+        >{{ employmentHistory.companyName }}</a
+      >
+      <p class="employment_history_duration">
+        {{ employmentHistory.duration }}
+      </p>
       <ul class="employment_history_list">
         <p class="employment_history_intro">CONTRIBUTIONS</p>
-        <li class="employment_history_listItem">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          quasi sint sed eligendi soluta et nam optio voluptas quia culpa sequi
-          veritatis cupiditate praesentium, nesciunt eveniet fugit enim unde
-          sit?
-        </li>
-        <li class="employment_history_listItem">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          quasi sint sed eligendi soluta et nam optio voluptas quia culpa sequi
-          veritatis cupiditate praesentium, nesciunt eveniet fugit enim unde
-          sit?
-        </li>
-        <li class="employment_history_listItem">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          quasi sint sed eligendi soluta et nam optio voluptas quia culpa sequi
-          veritatis cupiditate praesentium, nesciunt eveniet fugit enim unde
-          sit?
-        </li>
-        <li class="employment_history_listItem">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-          quasi sint sed eligendi soluta et nam optio voluptas quia culpa sequi
-          veritatis cupiditate praesentium, nesciunt eveniet fugit enim unde
-          sit?
+        <li
+          class="employment_history_listItem"
+          *ngFor="let contribute of employmentHistory.contributions"
+        >
+          {{ contribute }}
         </li>
       </ul>
     </div>
@@ -58,7 +54,7 @@
 <p class="title">Education</p>
 
 <section class="education_wrapper">
-  <div class="education_container" *ngFor="let n of [2, 3, 4]">
+  <div class="education_container" *ngFor="let n of [2]">
     <p class="education_duration">January 2018 - April 2022</p>
     <p class="education_degree">
       Bachelor Of Science In Computer Science (Bsc)
@@ -74,16 +70,6 @@
     <ul class="education_list">
       <p class="education_activities">Activities</p>
       <li class="education_listItem">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-        quasi sint sed eligendi soluta et nam optio voluptas quia culpa sequi
-        veritatis cupiditate praesentium, nesciunt eveniet fugit enim unde sit?
-      </li>
-      <li>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-        quasi sint sed eligendi soluta et nam optio voluptas quia culpa sequi
-        veritatis cupiditate praesentium, nesciunt eveniet fugit enim unde sit?
-      </li>
-      <li>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
         quasi sint sed eligendi soluta et nam optio voluptas quia culpa sequi
         veritatis cupiditate praesentium, nesciunt eveniet fugit enim unde sit?
