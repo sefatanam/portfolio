@@ -54,25 +54,25 @@
 <p class="title">Education</p>
 
 <section class="education_wrapper">
-  <div class="education_container" *ngFor="let n of [2]">
-    <p class="education_duration">January 2018 - April 2022</p>
+  <div class="education_container" *ngFor="let education of educations | async">
+    <p class="education_duration">{{ education.duration }}</p>
     <p class="education_degree">
-      Bachelor Of Science In Computer Science (Bsc)
+      {{ education.degree }}
     </p>
     <p class="education_institute">
-      Atish Dipankar University of Science & Technology
+      {{ education.instituteName }}
     </p>
     <p class="education_note">
-      N/B:Unfortunately, Takes some extra time to complete my graduation for
-      university fault.
+      {{ education.note }}
     </p>
 
     <ul class="education_list">
       <p class="education_activities">Activities</p>
-      <li class="education_listItem">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-        quasi sint sed eligendi soluta et nam optio voluptas quia culpa sequi
-        veritatis cupiditate praesentium, nesciunt eveniet fugit enim unde sit?
+      <li
+        class="education_listItem"
+        *ngFor="let activity of education.activities"
+      >
+        {{ activity }}
       </li>
     </ul>
   </div>
