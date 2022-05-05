@@ -126,6 +126,10 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
       margin-left: 10%;
       font-size  : 0.9rem;
       position   : relative;
+
+      @include for-phone {
+        margin-left: 5%;
+      }
     }
 
     &_intro {
@@ -152,9 +156,10 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
       text-align : center;
       line-height: 1.5em;
 
-      @include for-phone {
-        display: none;
-      }
+      // @include for-phone {
+      //   // display: none;
+      //   padding: 0 1em;
+      // }
     }
 
     &_container {
@@ -182,6 +187,8 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
       margin        : 1em 0;
       text-transform: uppercase;
 
+
+
     }
 
     &_list {
@@ -193,6 +200,14 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
     &_listItem {
       font-size: 0.9rem;
       position : relative;
+
+      @include for-phone {
+        left: 5%;
+      }
+
+      @include for-web {
+        left: 7%;
+      }
     }
   }
 
