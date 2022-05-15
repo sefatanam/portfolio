@@ -17,6 +17,13 @@ const routes: Routes = [
     }
   },
   {
+    path: 'art',
+    loadChildren: () => import('./art/art.module').then((m) => m.ArtModule),
+    data: {
+      title: 'Sefat Anam -  Art Page'
+    }
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
