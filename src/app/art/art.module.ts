@@ -1,11 +1,13 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { ArtRoutingModule } from './art-routing.module';
-import { ArtComponent } from './art.component';
+import {ArtRoutingModule} from './art-routing.module';
+import {ArtComponent} from './art.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [ArtComponent],
-  imports: [CommonModule, ArtRoutingModule]
+  imports: [CommonModule, ArtRoutingModule, HttpClientModule]
 })
-export class ArtModule {}
+export class ArtModule {
+}
