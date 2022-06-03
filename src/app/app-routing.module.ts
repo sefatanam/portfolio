@@ -1,27 +1,23 @@
-import { RouterModule, Routes } from '@angular/router';
-import { NgModule } from '@angular/core';
+import { Routes } from '@angular/router';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
-    data: {
-      title: 'Sefat Anam - Home Page'
-    }
+    loadComponent: () =>
+      import('./home/home.component').then((m) => m.HomeComponent),
+    title: 'Sefat Anam - Home Page'
   },
   {
     path: 'portfolio',
-    loadChildren: () => import('./info/info.module').then((m) => m.InfoModule),
-    data: {
-      title: 'Sefat Anam - Portfolio Page'
-    }
+    loadComponent: () =>
+      import('./info/info.component').then((m) => m.InfoComponent),
+    title: 'Sefat Anam - Portfolio Page'
   },
   {
     path: 'art',
-    loadChildren: () => import('./art/art.module').then((m) => m.ArtModule),
-    data: {
-      title: 'Sefat Anam -  Art Page'
-    }
+    loadComponent: () =>
+      import('./art/art.component').then((m) => m.ArtComponent),
+    title: 'Sefat Anam -  Art Page'
   },
   {
     path: '',
@@ -29,9 +25,3 @@ const routes: Routes = [
     pathMatch: 'full'
   }
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule {}

@@ -1,16 +1,11 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { TitleService } from './utils/title.service';
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  standalone: true,
+  imports: [RouterModule]
 })
-export class AppComponent implements OnInit {
-  constructor(private titleService: TitleService) {}
-
-  ngOnInit(): void {
-    this.titleService.init();
-  }
-}
+export class AppComponent {}

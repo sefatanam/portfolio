@@ -1,8 +1,5 @@
 <div class="container">
-  <figure
-    *ngFor="let image of images | async; let index = index"
-    [ngClass]="{ landscape: index % 2 === 0 }"
-  >
+  <figure *ngFor="let image of images | async" class="landscape">
     <img [src]="image.urls.regular" alt="My Shot" />
     <figcaption>{{ image.description }}</figcaption>
   </figure>
