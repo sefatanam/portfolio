@@ -1,27 +1,13 @@
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+A portfolio is a compilation of materials that exemplifies your beliefs, skills, qualifications, education, training, and experiences. It provides insight into your personality and work ethic. A portfolio website is generally a static website featuring work samples and other details as explained above. It is closely related to Online Resume or C.V.
+<br>
 
-## Development server
+Hosted Link : https://sefatanam.me
+<br>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#####  __Project Generate Using__
+##### Angular CLI: 14.0.0 <br>
+##### Node: 16.15.1<br>
+##### Package Manager: npm 8.11.0 
