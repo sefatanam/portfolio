@@ -1,18 +1,19 @@
-import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Article } from '@interfaces/Article';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { DeveloperInformation } from '@interfaces/DeveloperInformation';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
+import { UntilDestroy } from '@ngneat/until-destroy';
 
+@UntilDestroy()
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [CommonModule, HttpClientModule]
+  imports: [CommonModule]
 })
 export class HomeComponent implements OnInit {
   developerInfo!: Observable<DeveloperInformation>;
@@ -20,11 +21,7 @@ export class HomeComponent implements OnInit {
   constructor(private httpClient: HttpClient) {}
 
   ngOnInit(): void {
-    this.developerInfo = this.httpClient.get<DeveloperInformation>(
-      environment.api_url + 'home.json'
-    );
-    this.articles = this.httpClient.get<Article[]>(
-      environment.api_url + 'articles.json'
-    );
+    this.developerInfo = this.httpClient.get<DeveloperInformation>('home.json');
+    this.articles = this.httpClient.get<Article[]>('articles.json');
   }
 }
