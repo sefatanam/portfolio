@@ -8,6 +8,6 @@ Hosted Link : https://sefatanam.me
 
 
 #####  __Project Generate Using__
-##### Angular CLI: 14.0.0 <br>
-##### Node: 16.15.1<br>
-##### Package Manager: npm 8.11.0 
+Angular CLI: 14.0.0 <br>
+Node: 16.15.1<br>
+Package Manager: npm 8.11.0 

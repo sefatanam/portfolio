@@ -1,0 +1,13 @@
+<div>
+  <p class="title">Side Projects</p>
+  <p style="text-align: center" class="text-gray">
+    Some of my random projects here.
+  </p>
+</div>
+<ul>
+  <li *ngFor="let project of projects | async">
+    <a *ngIf="project.link" [href]="project.link.url">{{ project.link.text }}</a
+    ><span *ngIf="project.description">{{ project.description }}</span>
+  </li>
+</ul>
+<!-- <p class="title">Other Experience</p> -->

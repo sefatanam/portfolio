@@ -28,7 +28,10 @@
       ],
       "@interfaces/*": [
         "./src/interfaces/*"
-      ]
+      ],
+      "@config/*": [
+        "./src/config/*"
+      ],
     },
     "plugins": [
       {
