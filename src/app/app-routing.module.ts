@@ -20,6 +20,12 @@ export const routes: Routes = [
     title: 'Sefat Anam -  Art Page'
   },
   {
+    path: 'projects',
+    loadComponent: () =>
+      import('./projects/projects.component').then((m) => m.ProjectsComponent),
+    title: 'Sefat Anam -  Project Page'
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
