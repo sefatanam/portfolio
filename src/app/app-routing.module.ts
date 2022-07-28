@@ -14,12 +14,6 @@ export const routes: Routes = [
     title: 'Sefat Anam - Portfolio Page'
   },
   {
-    path: 'art',
-    loadComponent: () =>
-      import('./art/art.component').then((m) => m.ArtComponent),
-    title: 'Sefat Anam -  Art Page'
-  },
-  {
     path: 'projects',
     loadComponent: () =>
       import('./projects/projects.component').then((m) => m.ProjectsComponent),

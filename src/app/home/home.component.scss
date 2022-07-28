@@ -70,6 +70,7 @@
 
     &_title {
       @include base-title;
+      padding-bottom: 1rem;
     }
 
     &_article {

@@ -5,12 +5,9 @@
   <p class="developer_description">{{ devInfo.description }} <br /><br /></p>
 </ng-container>
 
-<ul class="developer_article_wrapper">
-  <p class="developer_title">Here are some of my articls...</p>
-  <li
-    class="developer_article_container"
-    *ngFor="let article of articles | async"
-  >
+<ul class="developer_article_wrapper" *ngIf="articles | async as all_articles">
+  <p class="developer_title">Some of my articles...</p>
+  <li class="developer_article_container" *ngFor="let article of all_articles">
     <p>{{ article.publish_date }}</p>
     <a [href]="article.link" target="_blank">{{ article.title }}</a>
   </li>

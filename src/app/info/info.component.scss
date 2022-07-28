@@ -1,5 +1,6 @@
 @import "../../styles/media";
 $textPrimaryColor:rgba(94, 94, 94, 0.815);
+$list-font-size  :1em;
 
 @mixin base-title {
   text-align: center;
@@ -15,9 +16,6 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
 }
 
 :host {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-
   &>* {
     @include for-phone {
       margin: 1rem 0;
@@ -59,10 +57,11 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
 
     &_list {
       list-style-type: none;
+      padding-bottom : .5rem;
     }
 
     &_listItem {
-      font-size: 0.9em;
+      font-size: $list-font-size;
     }
   }
 
@@ -90,8 +89,6 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
       }
 
       @include for-phone {
-        // height: 50px;
-        // width : 50px;
         display: none;
       }
     }
@@ -120,11 +117,12 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
     &_list {
       display       : flex;
       flex-direction: column;
+      gap           : .5rem;
     }
 
     &_listItem {
       margin-left: 10%;
-      font-size  : 0.9rem;
+      font-size  : $list-font-size;
       position   : relative;
 
       @include for-phone {
@@ -198,7 +196,7 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
     }
 
     &_listItem {
-      font-size: 0.9rem;
+      font-size: $list-font-size;
       position : relative;
 
       @include for-phone {
@@ -213,5 +211,9 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
 
   footer {
     text-align: center;
+
+    .title {
+      padding-bottom: 1rem;
+    }
   }
 }

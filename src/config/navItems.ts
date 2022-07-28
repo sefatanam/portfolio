@@ -9,10 +9,6 @@ export const NavItems: Readonly<NavItem[]> = [
     title: 'Home'
   },
   {
-    routeLink: '/a`rt',
-    title: 'Art'
-  },
-  {
     routeLink: '/portfolio',
     title: 'Portfolio'
   },
