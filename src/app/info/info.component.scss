@@ -3,8 +3,8 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
 $list-font-size  :1em;
 
 @mixin base-title {
-  text-align: center;
-  color     : $textPrimaryColor;
+  text-align   : center;
+  // color     : $textPrimaryColor;
 
   @include for-web {
     font-size: 1.5rem;

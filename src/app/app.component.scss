@@ -2,17 +2,17 @@
 
 header {
   // @include for-web {
-  position          : sticky;
-  top               : 0;
-  left              : 0;
-  z-index           : 1;
-  // background     : white;
-  display           : flex;
-  justify-content   : center;
-  color             : rgb(59, 68, 80) !important;
-  box-shadow        : 0 2px 2px 0 rgba(128, 128, 128, 0.075);
-  background        : transparent;
-  backdrop-filter   : blur(100px);
+  position             : sticky;
+  top                  : 0;
+  left                 : 0;
+  z-index              : 1;
+  background           : white;
+  display              : flex;
+  justify-content      : center;
+  color                : rgb(59, 68, 80) !important;
+  box-shadow           : 0 2px 2px 0 rgba(128, 128, 128, 0.075);
+  // background        : transparent;
+  // backdrop-filter   : blur(100px);
 
   nav {
     ul {

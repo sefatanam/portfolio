@@ -2,8 +2,8 @@
 $textPrimaryColor:rgba(94, 94, 94, 0.815);
 
 @mixin base-title {
-  text-align: center;
-  color     : $textPrimaryColor;
+  text-align   : center;
+  // color     : $textPrimaryColor;
 
   @include for-web {
     font-size: 1.5rem;
@@ -18,15 +18,11 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
 :host {
 
   .text-gray {
-    margin-top: 1rem;
-    color     : $textPrimaryColor;
+    margin-top   : 1rem;
+    // color     : $textPrimaryColor;
   }
 
-  font-family: 'Segoe UI',
-  Tahoma,
-  Geneva,
-  Verdana,
-  sans-serif;
+
 
 
   &>* {
@@ -55,7 +51,7 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
     gap           : 1rem;
 
     li {
-      color      : $textPrimaryColor;
+      // color      : $textPrimaryColor;
       line-height: 1.6;
 
       a {

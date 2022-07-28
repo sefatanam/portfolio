@@ -1,7 +1,7 @@
 <ng-container *ngIf="developerInfo | async as devInfo">
-  <p class="developer_name">
+  <h1 class="developer_name">
     <span> {{ devInfo.name }} </span>
-  </p>
+  </h1>
   <p class="developer_description">{{ devInfo.description }} <br /><br /></p>
 </ng-container>
 
