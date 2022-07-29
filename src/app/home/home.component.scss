@@ -1,10 +1,13 @@
 @import '../../styles/media';
 
 @mixin base-name {
-  color      : var(--primaryTextColor);
-  font-family: 'Fredericka the Great';
-  font-size  : 3.5em;
-  margin-top : 4rem;
+  color         : var(--primaryTextColor);
+  // font-family: 'Fredericka the Great' !important;
+  font-family   : 'Edu VIC WA NT Beginner' !important;
+  font-size     : 3.5em;
+  margin-top    : 4rem;
+  text-transform: capitalize !important;
+
 }
 
 @mixin base-description {
