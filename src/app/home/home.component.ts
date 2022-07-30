@@ -5,6 +5,7 @@ import { DeveloperInformation } from '@interfaces/DeveloperInformation';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { UntilDestroy } from '@ngneat/until-destroy';
+import { ActivatedRoute } from '@angular/router';
 
 @UntilDestroy()
 @Component({
@@ -16,12 +17,15 @@ import { UntilDestroy } from '@ngneat/until-destroy';
   imports: [CommonModule]
 })
 export class HomeComponent implements OnInit {
-  developerInfo!: Observable<DeveloperInformation>;
-  articles!: Observable<Article[]>;
-  constructor(private httpClient: HttpClient) {}
+  developerInfo!: DeveloperInformation;
+  articles!: Article[];
+  constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.developerInfo = this.httpClient.get<DeveloperInformation>('home.json');
-    this.articles = this.httpClient.get<Article[]>('articles.json');
+    this.activatedRoute.data.subscribe(({ data }) => {
+      const { developerInfo, articles } = data;
+      this.articles = articles;
+      this.developerInfo = developerInfo;
+    });
   }
 }

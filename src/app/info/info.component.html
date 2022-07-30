@@ -1,10 +1,7 @@
 <h1 class="title">Stuff I Work With</h1>
 
 <section class="technology_wrapper">
-  <div
-    class="technology_container"
-    *ngFor="let technology of technologies | async"
-  >
+  <div class="technology_container" *ngFor="let technology of technologies">
     <p class="technology_name">{{ technology.type }}</p>
     <ul class="technology_list">
       <li class="technology_listItem" *ngFor="let name of technology.list">
@@ -19,7 +16,7 @@
 <section class="employment_history_wrapper">
   <div
     class="employment_history_container"
-    *ngFor="let employmentHistory of employmentHistories | async"
+    *ngFor="let employmentHistory of employmentHistories"
   >
     <img
       class="employment_history_image"
@@ -54,7 +51,7 @@
 <h1 class="title">Education</h1>
 
 <section class="education_wrapper">
-  <div class="education_container" *ngFor="let education of educations | async">
+  <div class="education_container" *ngFor="let education of educations">
     <p class="education_duration">{{ education.duration }}</p>
     <p class="education_degree">
       {{ education.degree }}

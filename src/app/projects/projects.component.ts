@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Project } from '@interfaces/Project';
 import { UntilDestroy } from '@ngneat/until-destroy';
 import { Observable } from 'rxjs';
@@ -14,9 +15,14 @@ import { Observable } from 'rxjs';
   imports: [CommonModule]
 })
 export class ProjectsComponent implements OnInit {
-  projects!: Observable<Readonly<Project[]>>;
-  constructor(private httpClient: HttpClient) {}
+  projects!: Readonly<Project[]>;
+
+  constructor(private activatedRoute: ActivatedRoute) {}
+
   ngOnInit(): void {
-    this.projects = this.httpClient.get<Project[]>('projects.json');
+    this.activatedRoute.data.subscribe(({ data }) => {
+      const { projects } = data;
+      this.projects = projects;
+    });
   }
 }

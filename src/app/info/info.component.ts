@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Technology } from '@interfaces/Technology';
 import { UntilDestroy } from '@ngneat/until-destroy';
+import { ActivatedRoute } from '@angular/router';
 
 @UntilDestroy()
 @Component({
@@ -17,17 +18,18 @@ import { UntilDestroy } from '@ngneat/until-destroy';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InfoComponent implements OnInit {
-  technologies!: Observable<Technology[]>;
-  employmentHistories!: Observable<EmploymentHistory[]>;
-  educations!: Observable<Education[]>;
+  technologies!: Technology[];
+  employmentHistories!: EmploymentHistory[];
+  educations!: Education[];
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.technologies = this.httpClient.get<Technology[]>('technologies.json');
-    this.educations = this.httpClient.get<Education[]>('educations.json');
-    this.employmentHistories = this.httpClient.get<EmploymentHistory[]>(
-      'employmentHistory.json'
-    );
+    this.activatedRoute.data.subscribe(({ data }) => {
+      const { technologies, educations, employmentHistories } = data;
+      this.technologies = technologies;
+      this.educations = educations;
+      this.employmentHistories = employmentHistories;
+    });
   }
 }

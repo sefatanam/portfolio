@@ -1,4 +1,4 @@
-<ng-container *ngIf="developerInfo | async as devInfo">
+<ng-container *ngIf="developerInfo as devInfo">
   <h1 class="developer_name">
     <span> {{ devInfo.name }} </span>
   </h1>
@@ -6,7 +6,7 @@
   <p class="developer_description">{{ devInfo.description }} <br /><br /></p>
 </ng-container>
 
-<ul class="developer_article_wrapper" *ngIf="articles | async as all_articles">
+<ul class="developer_article_wrapper" *ngIf="articles as all_articles">
   <p class="developer_title">Some of my articles...</p>
   <li class="developer_article_container" *ngFor="let article of all_articles">
     <p>{{ article.publish_date }}</p>
