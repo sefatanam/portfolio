@@ -22,6 +22,10 @@ header {
       padding        : 1rem 0;
       align-items    : center;
 
+      @include for-phone {
+        gap: 1rem;
+      }
+
 
       li {
         cursor       : pointer;
@@ -32,7 +36,8 @@ header {
         }
 
         a {
-          color: rgb(59, 68, 80);
+          text-decoration: none;
+          color          : rgb(59, 68, 80);
         }
       }
     }

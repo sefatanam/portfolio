@@ -1,0 +1,75 @@
+@import "../../styles/media";
+
+
+:host {
+    height: 100%;
+    width : 100%;
+
+    &>* {
+        @include for-phone {
+            margin: 1rem 0;
+        }
+
+        @include for-web {
+            margin: 1rem 0;
+        }
+    }
+
+    form {
+        display              : grid;
+        width                : 100%;
+        grid-template-columns: repeat(1, 1fr);
+        gap                  : .5rem;
+
+        input {
+            outline  : none;
+            border   : 2px solid rgb(221, 221, 221);
+            padding  : .5rem;
+            color    : black;
+            font-size: 1.2rem;
+
+            &:focus {
+                border: 2px solid gray;
+            }
+        }
+
+        textarea {
+            outline    : none;
+            border     : 2px solid rgb(221, 221, 221);
+            padding    : .5rem;
+            color      : black;
+            font-size  : 1.2rem;
+            line-height: 1.6;
+
+            &:focus {
+                border: 2px solid gray;
+            }
+        }
+
+        div {
+            margin-top     : 2rem;
+            display        : flex;
+            justify-content: flex-end;
+
+            button {
+                padding       : .5rem 1.5rem;
+                border        : 2px solid rgb(221, 221, 221);
+                font-size     : 1.2rem;
+                text-transform: uppercase;
+                background    : white;
+                font-weight   : 400;
+                cursor        : pointer;
+
+                &:hover {
+                    background: rgb(236, 236, 236);
+                }
+
+                &:active {
+                    border: 1px solid gray;
+                }
+            }
+        }
+    }
+
+
+}

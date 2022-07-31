@@ -15,5 +15,9 @@ export const NavItems: Readonly<NavItem[]> = [
   {
     routeLink: '/projects',
     title: 'Projects'
+  },
+  {
+    routeLink: '/feedback',
+    title: 'DM'
   }
 ];

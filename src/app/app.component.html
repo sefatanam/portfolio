@@ -1,8 +1,8 @@
 <header>
   <nav>
     <ul>
-      <li [routerLink]="item.routeLink" *ngFor="let item of navItems">
-        <h5>{{ item.title }}</h5>
+      <li *ngFor="let item of navItems">
+        <a [routerLink]="item.routeLink">{{ item.title }}</a>
       </li>
       <li>
         <a href="https://github.com/sefatanam" target="_blank">
