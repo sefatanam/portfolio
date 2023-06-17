@@ -1,9 +1,7 @@
 @import '../../styles/media';
 
 @mixin base-name {
-  color         : var(--primaryTextColor);
-  // font-family: 'Fredericka the Great' !important;
-  font-family   : 'Edu VIC WA NT Beginner' !important;
+  color: var(--primaryTextColor);
   font-size     : 3.5em;
   margin-top    : 4rem;
   text-transform: capitalize !important;
@@ -13,24 +11,18 @@
 @mixin base-description {
   color      : var(--primaryTextColor);
   font-weight: 400;
-  line-height: 28px;
-  font-size  : 1.2em;
-  text-align: justify;
-}
-
-@mixin base-text {
-  font-size: 1.2em;
 }
 
 @mixin base-title {
   font-weight: 400;
   opacity    : 0.7;
+  font-size: x-large;
 }
 
 @mixin base-article($align-items, $pMargin, $pPosition, $mFlexDirection, $mGap) {
   align-items   : $align-items;
   display       : flex;
-  padding       : 1rem 0;
+  padding: 0.5rem 0;
   flex-direction: $mFlexDirection;
   gap           : $mGap;
 
@@ -55,10 +47,9 @@
 
 :host {
 
-  --primaryTextColor: rgb(75, 85, 99);
+  --primaryTextColor: black;
 
   &>* {
-    @include base-text;
     margin-top: 1rem;
   }
 
@@ -71,12 +62,11 @@
       @include base-description;
     }
 
-    &_title {
-      @include base-title;
-      padding-bottom: 1rem;
-    }
-
-    &_article {
+        &_article {
+      &_title {
+          @include base-title;
+          padding-bottom: 1rem;
+        }
 
       &_wrapper {
         list-style-type: none;
