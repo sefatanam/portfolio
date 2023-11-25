@@ -6,5 +6,16 @@
     "buildCommand": "npm run build:ssr",
     "outputDirectory": "dist",
     "devCommand": "node dist/portfolio/server/main.js",
-    "framework": null
+    "builds": [
+        {
+          "src": "dist/*",
+          "use": "@vercel/static-build"
+        }
+      ],
+      "routes": [
+        {
+          "src": "/(.*)",
+          "dest": "/dist/portfolio/browser/index.html"
+        }
+      ]
 }
