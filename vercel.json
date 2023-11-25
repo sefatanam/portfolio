@@ -1,0 +1,6 @@
+{
+    "version":2,
+    "public":true,
+    "name":"portfolio",
+    "devCommand":"node dist/portfolio/server/main.js"
+}
