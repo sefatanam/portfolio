@@ -1,10 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {
-  Resolve,
-  RouterStateSnapshot,
-  ActivatedRouteSnapshot
-} from '@angular/router';
+import { RouterStateSnapshot, ActivatedRouteSnapshot } from '@angular/router';
 import { Article } from '@interfaces/Article';
 import { DeveloperInformation } from '@interfaces/DeveloperInformation';
 import { forkJoin, map, Observable, of } from 'rxjs';
@@ -16,7 +12,7 @@ interface HomeData {
 @Injectable({
   providedIn: 'root'
 })
-export class HomeResolver implements Resolve<HomeData> {
+export class HomeResolver {
   constructor(private httpClient: HttpClient) {}
   resolve(
     route: ActivatedRouteSnapshot,
