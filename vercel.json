@@ -5,6 +5,6 @@
     "installCommand": "npm install",
     "buildCommand": "npm run build:ssr",
     "outputDirectory": "dist",
-    "devCommand": "node portfolio/server/main.js",
+    "devCommand": "node dist/portfolio/server/main.js",
     "framework": null
 }
