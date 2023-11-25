@@ -6,6 +6,6 @@ A portfolio is a compilation of materials that exemplifies your beliefs, skills,
 
 
 #####  __Project Generate Using__
-Angular CLI: 14.0.0 <br>
-Node: 16.15.1<br>
-Package Manager: npm 8.11.0 
+Angular CLI: 17.0.4 <br>
+Node: 20.9.0<br>
+Package Manager: npm 10.1.0 
