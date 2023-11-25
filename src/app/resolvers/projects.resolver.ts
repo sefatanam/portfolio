@@ -1,10 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {
-  Resolve,
-  RouterStateSnapshot,
-  ActivatedRouteSnapshot
-} from '@angular/router';
+import { RouterStateSnapshot, ActivatedRouteSnapshot } from '@angular/router';
 import { Project } from '@interfaces/Project';
 import { forkJoin, map, Observable } from 'rxjs';
 
@@ -15,7 +11,7 @@ interface ProjectData {
 @Injectable({
   providedIn: 'root'
 })
-export class ProjectsResolver implements Resolve<ProjectData> {
+export class ProjectsResolver {
   constructor(private httpClient: HttpClient) {}
   resolve(
     route: ActivatedRouteSnapshot,

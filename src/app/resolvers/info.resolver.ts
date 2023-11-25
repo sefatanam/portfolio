@@ -1,10 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {
-  Resolve,
-  RouterStateSnapshot,
-  ActivatedRouteSnapshot
-} from '@angular/router';
+import { RouterStateSnapshot, ActivatedRouteSnapshot } from '@angular/router';
 import { Education } from '@interfaces/Education';
 import { EmploymentHistory } from '@interfaces/EmploymentHistory';
 import { Technology } from '@interfaces/Technology';
@@ -18,7 +14,7 @@ interface InfoData {
 @Injectable({
   providedIn: 'root'
 })
-export class InfoResolver implements Resolve<InfoData> {
+export class InfoResolver {
   constructor(private httpClient: HttpClient) {}
 
   resolve(
