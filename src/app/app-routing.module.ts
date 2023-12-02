@@ -38,7 +38,7 @@ export const routes: Routes = [
     title: 'Sefat Anam -  Ping Me'
   },
   {
-    path: '',
+    path: '**',
     redirectTo: 'home',
     pathMatch: 'full'
   }
