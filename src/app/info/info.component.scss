@@ -124,6 +124,7 @@ $list-font-size  :1em;
       margin-left: 10%;
       font-size  : $list-font-size;
       position   : relative;
+      line-height:23px;
 
       @include for-phone {
         margin-left: 5%;
@@ -198,6 +199,7 @@ $list-font-size  :1em;
     &_listItem {
       font-size: $list-font-size;
       position : relative;
+      line-height:23px;
 
       @include for-phone {
         left: 5%;
