@@ -5,7 +5,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class GithubService {
-  async downloadPDFFromGitHub() {
+  async downloadResumeFromGithub() {
     try {
       // Fetch the PDF content from GitHub
       const response = await fetch(environment.resume.githubPdfUrl, {

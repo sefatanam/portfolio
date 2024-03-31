@@ -17,6 +17,6 @@ export class AppComponent {
   gitubService = inject(GithubService);
 
   async downloadResume() {
-    await this.gitubService.downloadFromGitHub();
+    await this.gitubService.downloadResumeFromGithub();
   }
 }
