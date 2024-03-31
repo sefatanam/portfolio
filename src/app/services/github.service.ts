@@ -5,28 +5,21 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class GithubService {
-  async downloadFromGitHub() {
+  async downloadPDFFromGitHub() {
     try {
-      const { repoUrl, fileName, filePath } = environment.resume;
-      // Construct the raw GitHub URL
-      const rawUrl = `${repoUrl}/raw/main/${filePath}`;
-
-      // Fetch file content
-      const response = await fetch(rawUrl, { mode: 'no-cors' });
-      const fileContent = await response.blob();
-
-      // Create a Blob from file content
-      const blob = new Blob([fileContent], {
-        type: 'application/octet-stream'
+      // Fetch the PDF content from GitHub
+      const response = await fetch(environment.resume.githubPdfUrl, {
+        mode: 'no-cors'
       });
+      const pdfBlob = await response.blob();
 
-      // Generate object URL
-      const url = URL.createObjectURL(blob);
+      // Create a blob URL from the PDF content
+      const blobUrl = URL.createObjectURL(pdfBlob);
 
-      // Create a temporary link element
+      // Create a temporary anchor element
       const link = document.createElement('a');
-      link.href = url;
-      link.download = fileName;
+      link.href = blobUrl;
+      link.download = environment.resume.title;
 
       // Trigger the download
       document.body.appendChild(link);
@@ -34,16 +27,10 @@ export class GithubService {
 
       // Clean up
       document.body.removeChild(link);
-      URL.revokeObjectURL(url);
+      URL.revokeObjectURL(blobUrl);
     } catch (error) {
-      alert('Error downloading resume.');
-      console.error('Error downloading resume.', error);
+      alert('Error downloading PDF');
+      console.error('Error downloading PDF:', error);
     }
   }
-
-  /* // Example usage:
-  const repoUrl = 'https://github.com/username/repo'; // Replace with your GitHub repository URL
-  const filePath = 'path/to/file.txt'; // Path to the file in the repository
-  const fileName = 'file.txt'; // Name for the downloaded file
-  downloadFromGitHub(repoUrl, filePath, fileName); */
 }
