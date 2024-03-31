@@ -8,8 +8,7 @@ export const environment = {
     'https://api.unsplash.com/users/im_sefat/photos?client_id=LDGIkb4OEgXMXLpMKWgXxvg8Qx18XinyoiUJYn2DC1g',
 
   resume: {
-    githubPdfUrl:
-      'https://github.com/thesefat/resume/raw/main/Resume%20of%20Sefat%20Anam.pdf',
+    githubPdfUrl: '/assets/resume/sefatanam.pdf',
     title: 'Resume of Sefat Anam.pdf'
   }
 };

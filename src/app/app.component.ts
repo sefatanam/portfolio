@@ -15,8 +15,4 @@ import { environment } from 'src/environments/environment';
 export class AppComponent {
   public navItems = NavItems;
   gitubService = inject(GithubService);
-
-  async downloadResume() {
-    await this.gitubService.downloadResumeFromGithub();
-  }
 }

@@ -7,10 +7,10 @@ import { environment } from 'src/environments/environment';
 })
 export class GithubService {
   httpClient = inject(HttpClient);
-  downloadResumeFromGithub() {
+  donwloadResume() {
     this.httpClient
       .get(environment.resume.githubPdfUrl, {
-        responseType: 'blob',
+        responseType: 'blob' as 'json',
         params: { skipInterceptor: true }
       })
       .subscribe((response: any) => {
