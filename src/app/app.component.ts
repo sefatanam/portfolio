@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NavItems } from '@config/navItems';
+import { GithubService } from './services/github.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +14,9 @@ import { NavItems } from '@config/navItems';
 })
 export class AppComponent {
   public navItems = NavItems;
+  gitubService = inject(GithubService);
+
+  async downloadResume() {
+    await this.gitubService.downloadFromGitHub();
+  }
 }
