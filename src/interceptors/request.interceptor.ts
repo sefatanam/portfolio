@@ -15,6 +15,9 @@ export class RequestInterceptor implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
+    if (request.params.get('skipInterceptor')) {
+      return next.handle(request);
+    }
 
     const modifiedReq = request.clone({
       url: environment.api_url.concat(request.url.toString())
