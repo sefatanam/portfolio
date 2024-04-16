@@ -7,6 +7,8 @@ jobs:
   ngxUptodate:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.2
       - name: Updating ng dependencies # the magic happens here !
         uses: fast-facts/ng-update@v1
         with:
