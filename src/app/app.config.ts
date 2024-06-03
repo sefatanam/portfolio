@@ -2,7 +2,7 @@ import { PreloadAllModules, RouterModule } from '@angular/router';
 import { RequestInterceptor } from '@interceptors/request.interceptor';
 import { routes } from './app-routing.module';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import {
   provideClientHydration,
