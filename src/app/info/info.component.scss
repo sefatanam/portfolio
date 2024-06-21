@@ -1,10 +1,9 @@
 @import "../../styles/media";
-$textPrimaryColor:rgba(94, 94, 94, 0.815);
-$list-font-size  :1em;
+$textPrimaryColor:canvastext;
+
 
 @mixin base-title {
   text-align   : center;
-  // color     : $textPrimaryColor;
 
   @include for-web {
     font-size: 1.5rem;
@@ -46,30 +45,26 @@ $list-font-size  :1em;
     }
 
     &_container {
-      margin: 3rem 0;
+      background: #f9f9f912;
+      padding: 1rem;
+      border-radius: 10px;
     }
 
     &_name {
-      color        : rgba(41, 39, 39, 0.815);
-      font-size    : 0.8em;
+      color        : canvastext;
       margin-bottom: 1em;
+      font-weight: bold;
     }
 
     &_list {
       list-style-type: none;
       padding-bottom : .5rem;
     }
-
-    &_listItem {
-      font-size: $list-font-size;
-    }
   }
 
 
 
   .employment_history {
-
-    // &_wrapper{}
 
     &_container {
       position  : relative;
@@ -95,24 +90,19 @@ $list-font-size  :1em;
 
     &_information {
       flex       : 1;
-      line-height: 1.2em;
     }
 
     &_designation {
-      font-size  : 0.9em;
-      font-weight: 600;
+      font-weight: bold;
     }
 
     &_companyName {
-      font-size      : 0.9em;
       text-decoration: none;
       cursor         : pointer;
-      color          : black;
+      color          : canvastext;
     }
 
-    &_duration {
-      font-size: 0.8rem;
-    }
+   
 
     &_list {
       display       : flex;
@@ -122,9 +112,7 @@ $list-font-size  :1em;
 
     &_listItem {
       margin-left: 10%;
-      font-size  : $list-font-size;
       position   : relative;
-      line-height:23px;
 
       @include for-phone {
         margin-left: 5%;
@@ -133,16 +121,6 @@ $list-font-size  :1em;
 
     &_intro {
       margin: 1em 0;
-
-      @include for-web {
-        font-size: 0.7rem;
-      }
-
-      @include for-phone {
-        font-size: 0.8em;
-        color    : #78848bdc;
-
-      }
     }
   }
 
@@ -152,42 +130,17 @@ $list-font-size  :1em;
     }
 
     &_wrapper {
-      text-align : center;
-      line-height: 1.5em;
-
-      // @include for-phone {
-      //   // display: none;
-      //   padding: 0 1em;
-      // }
+      text-align : center;  
     }
 
     &_container {
       margin: 1rem 0;
     }
 
-    &_duration {
-      font-weight: 600;
-    }
-
-    &_degree {
-      font-size: 1.2em;
-    }
-
-    // &_institute {
-    //   font-size: 0.9em;
-    // }
-
-    &_note {
-      font-size: 0.8em;
-    }
 
     &_activities {
-      font-size     : 0.8em;
-      margin        : 1em 0;
+      margin        : .5em 0;
       text-transform: uppercase;
-
-
-
     }
 
     &_list {
@@ -197,9 +150,7 @@ $list-font-size  :1em;
     }
 
     &_listItem {
-      font-size: $list-font-size;
       position : relative;
-      line-height:23px;
 
       @include for-phone {
         left: 5%;

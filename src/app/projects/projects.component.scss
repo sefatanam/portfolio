@@ -1,9 +1,8 @@
 @import "../../styles/media";
-$textPrimaryColor:rgba(94, 94, 94, 0.815);
+$textPrimaryColor:canvastext;
 
 @mixin base-title {
   text-align   : center;
-  // color     : $textPrimaryColor;
 
   @include for-web {
     font-size: 1.5rem;
@@ -19,7 +18,6 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
 
   .text-gray {
     margin-top   : 1rem;
-    // color     : $textPrimaryColor;
   }
 
 
@@ -51,7 +49,6 @@ $textPrimaryColor:rgba(94, 94, 94, 0.815);
     gap           : 1rem;
 
     li {
-      // color      : $textPrimaryColor;
       line-height: 1.6;
 
       a {

@@ -1,18 +1,16 @@
-import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NavItems } from '@config/navItems';
-import { GithubService } from './services/github.service';
-import { environment } from 'src/environments/environment';
+import { BackgroundComponent } from "./components/background.component";
+import { HeaderComponent } from "./components/header.component";
+import { ResumeComponent } from "./components/resume.component";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [RouterModule, CommonModule]
+  imports: [RouterModule, BackgroundComponent, HeaderComponent, ResumeComponent]
 })
 export class AppComponent {
-  public navItems = NavItems;
-  gitubService = inject(GithubService);
+
 }
