@@ -3,7 +3,7 @@ $textPrimaryColor:canvastext;
 
 
 @mixin base-title {
-  text-align   : center;
+  text-align: center;
 
   @include for-web {
     font-size: 1.5rem;
@@ -33,27 +33,35 @@ $textPrimaryColor:canvastext;
     &_wrapper {
       @include for-web {
         display              : grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap                  : 2rem;
+        grid-auto-flow       : dense;
       }
 
       @include for-phone {
         display              : grid;
         grid-template-columns: repeat(1, 1fr);
         text-align           : center;
+        gap                  : 2rem;
+      }
+
+      om-shine-border {
+        display: block;
+        height: min-content;
       }
     }
 
+
     &_container {
-      background: #f9f9f912;
-      padding: 1rem;
+      background   : #f9f9f912;
+      padding      : 1rem;
       border-radius: 10px;
     }
 
     &_name {
       color        : canvastext;
       margin-bottom: 1em;
-      font-weight: bold;
+      font-weight  : bold;
     }
 
     &_list {
@@ -89,7 +97,7 @@ $textPrimaryColor:canvastext;
     }
 
     &_information {
-      flex       : 1;
+      flex: 1;
     }
 
     &_designation {
@@ -102,7 +110,7 @@ $textPrimaryColor:canvastext;
       color          : canvastext;
     }
 
-   
+
 
     &_list {
       display       : flex;
@@ -130,7 +138,7 @@ $textPrimaryColor:canvastext;
     }
 
     &_wrapper {
-      text-align : center;  
+      text-align: center;
     }
 
     &_container {
@@ -150,7 +158,7 @@ $textPrimaryColor:canvastext;
     }
 
     &_listItem {
-      position : relative;
+      position: relative;
 
       @include for-phone {
         left: 5%;

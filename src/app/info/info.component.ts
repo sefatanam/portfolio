@@ -1,12 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Education } from '@interfaces/Education';
 import { EmploymentHistory } from '@interfaces/EmploymentHistory';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { Technology } from '@interfaces/Technology';
 import { UntilDestroy } from '@ngneat/until-destroy';
-import { ActivatedRoute } from '@angular/router';
+import { NgxBorderBeamComponent } from '@omnedia/ngx-border-beam';
 
 @UntilDestroy()
 @Component({
@@ -14,7 +13,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './info.component.html',
   styleUrls: ['./info.component.scss'],
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgxBorderBeamComponent],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InfoComponent implements OnInit {
@@ -22,7 +21,7 @@ export class InfoComponent implements OnInit {
   employmentHistories!: EmploymentHistory[];
   educations!: Education[];
 
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(({ data }) => {
