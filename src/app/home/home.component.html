@@ -1,7 +1,11 @@
 <ng-container *ngIf="developerInfo as devInfo">
-  <h1 class="developer_name">
-    <span> {{ devInfo.name }} </span>
-  </h1>
+  <div class="heading">
+    <h1 class="developer_name">
+      <span> {{ devInfo.name }} </span>
+    </h1>
+    <app-intro [words]="words" />
+  </div>
+
 
   <p class="developer_description">{{ devInfo.description }} <br /><br /></p>
 </ng-container>

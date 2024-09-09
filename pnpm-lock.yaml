@@ -41,15 +41,12 @@ importers:
       '@ngneat/until-destroy':
         specifier: ^9.0.2
         version: 9.2.3(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))(rxjs@7.5.7)
-      '@omnedia/ngx-border-beam':
-        specifier: ^1.1.2
-        version: 1.1.2(@angular/common@18.2.2(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))(rxjs@7.5.7))(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))
-      '@omnedia/ngx-shine-border':
-        specifier: ^1.1.0
-        version: 1.1.0(@angular/common@18.2.2(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))(rxjs@7.5.7))(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))
       '@omnedia/ngx-spotlight':
         specifier: ^1.0.1
         version: 1.0.1(@angular/common@18.2.2(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))(rxjs@7.5.7))(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))
+      '@omnedia/ngx-typewriter':
+        specifier: ^1.2.0
+        version: 1.2.0(@angular/common@18.2.2(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))(rxjs@7.5.7))(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))(@omnedia/rxjs-typewriter@1.1.0)(rxjs@7.5.7)
       express:
         specifier: ^4.18.2
         version: 4.19.2
@@ -1540,23 +1537,22 @@ packages:
     resolution: {integrity: sha512-y7efHHwghQfk28G2z3tlZ67pLG0XdfYbcVG26r7YIXALRsrVQcTq4/tdenSmdOrEsNahIYA/eh8aEVROWGFUDg==}
     engines: {node: ^16.14.0 || >=18.0.0}
 
-  '@omnedia/ngx-border-beam@1.1.2':
-    resolution: {integrity: sha512-eDIjPbq3pKpqdjSy6a7AI2f/g3jMTkwTAWkK2fKM7ZMBm4rKtaJ+kE84Z7gjWaWY0RF9CY0M2rCu3R08E2R3tQ==}
-    peerDependencies:
-      '@angular/common': ^18.2.0
-      '@angular/core': ^18.2.0
-
-  '@omnedia/ngx-shine-border@1.1.0':
-    resolution: {integrity: sha512-/idQyEe3th0rfH1omdWMpYFjhq3MHRCDUwYg484sgGKn7944X2zukoPbP1nx+7yM1B+rpwwZNq2Rjw1hSKE3ig==}
-    peerDependencies:
-      '@angular/common': ^18.2.0
-      '@angular/core': ^18.2.0
-
   '@omnedia/ngx-spotlight@1.0.1':
     resolution: {integrity: sha512-+kVkRS7meZOyh/OiqRJmZLrpq4S4IDp3OjWrPblD0waa1Qyvi/mCCM/8VD6Z9dDGVfL0y+M3bfFgzTDG3kgJmA==}
     peerDependencies:
       '@angular/common': ^18.2.0
       '@angular/core': ^18.2.0
+
+  '@omnedia/ngx-typewriter@1.2.0':
+    resolution: {integrity: sha512-GCdaAQfMGaEu+Y1JzN9KKVlQbSMKsFySQALPRsBUEvv8t2tAI0AdVH16YHIfXFe/xotA9h7uf1LQQDHvV4TfYQ==}
+    peerDependencies:
+      '@angular/common': ^18.2.0
+      '@angular/core': ^18.2.0
+      '@omnedia/rxjs-typewriter': ^1.1.0
+      rxjs: ~7.8.0
+
+  '@omnedia/rxjs-typewriter@1.1.0':
+    resolution: {integrity: sha512-CHCCBKrgYRvlj4Mq61gcpd6Skqw4M3UK5v6Ed2OEjEkWop+a/IRAlHjRw/yDVzjxH/d+pmH9ENNDQDoSNoeEGQ==}
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -6181,23 +6177,23 @@ snapshots:
       - bluebird
       - supports-color
 
-  '@omnedia/ngx-border-beam@1.1.2(@angular/common@18.2.2(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))(rxjs@7.5.7))(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))':
-    dependencies:
-      '@angular/common': 18.2.2(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))(rxjs@7.5.7)
-      '@angular/core': 18.2.2(rxjs@7.5.7)(zone.js@0.14.10)
-      tslib: 2.6.3
-
-  '@omnedia/ngx-shine-border@1.1.0(@angular/common@18.2.2(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))(rxjs@7.5.7))(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))':
-    dependencies:
-      '@angular/common': 18.2.2(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))(rxjs@7.5.7)
-      '@angular/core': 18.2.2(rxjs@7.5.7)(zone.js@0.14.10)
-      tslib: 2.6.3
-
   '@omnedia/ngx-spotlight@1.0.1(@angular/common@18.2.2(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))(rxjs@7.5.7))(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))':
     dependencies:
       '@angular/common': 18.2.2(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))(rxjs@7.5.7)
       '@angular/core': 18.2.2(rxjs@7.5.7)(zone.js@0.14.10)
       tslib: 2.6.2
+
+  '@omnedia/ngx-typewriter@1.2.0(@angular/common@18.2.2(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))(rxjs@7.5.7))(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))(@omnedia/rxjs-typewriter@1.1.0)(rxjs@7.5.7)':
+    dependencies:
+      '@angular/common': 18.2.2(@angular/core@18.2.2(rxjs@7.5.7)(zone.js@0.14.10))(rxjs@7.5.7)
+      '@angular/core': 18.2.2(rxjs@7.5.7)(zone.js@0.14.10)
+      '@omnedia/rxjs-typewriter': 1.1.0
+      rxjs: 7.5.7
+      tslib: 2.6.3
+
+  '@omnedia/rxjs-typewriter@1.1.0':
+    dependencies:
+      rxjs: 7.8.1
 
   '@pkgjs/parseargs@0.11.0':
     optional: true

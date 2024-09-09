@@ -1,11 +1,10 @@
-import { Article } from '@interfaces/Article';
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DeveloperInformation } from '@interfaces/DeveloperInformation';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { UntilDestroy } from '@ngneat/until-destroy';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Article } from '@interfaces/Article';
+import { DeveloperInformation } from '@interfaces/DeveloperInformation';
+import { UntilDestroy } from '@ngneat/until-destroy';
+import { IntroComponent } from '../components/intro.component';
 
 @UntilDestroy()
 @Component({
@@ -14,9 +13,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule, IntroComponent]
 })
 export class HomeComponent implements OnInit {
+  words = ['Frontend Developer ', 'Angular Developer', 'Typescript', 'Go', 'Nice to meet you!'];
+
   developerInfo!: DeveloperInformation;
   articles!: Article[];
   constructor(private activatedRoute: ActivatedRoute) {}

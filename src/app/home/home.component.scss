@@ -47,13 +47,29 @@
 
   --primaryTextColor: canvastext;
 
+  .heading{
+    display: grid;
+    align-items: baseline;
+    gap: 0.4em;
+  }
+
   &>* {
     margin-top: 1rem;
   }
 
   .developer {
     &_name {
-      @include base-name;
+      display: flex;
+      align-items: baseline;
+      span{
+        @include base-name;
+      }
+
+      app-intro{
+        p{
+          color: rebeccapurple
+        }
+      }
     }
 
     &_description {
