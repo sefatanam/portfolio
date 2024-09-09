@@ -5,7 +5,6 @@ import { Education } from '@interfaces/Education';
 import { EmploymentHistory } from '@interfaces/EmploymentHistory';
 import { Technology } from '@interfaces/Technology';
 import { UntilDestroy } from '@ngneat/until-destroy';
-import { NgxBorderBeamComponent } from '@omnedia/ngx-border-beam';
 
 @UntilDestroy()
 @Component({
@@ -13,7 +12,7 @@ import { NgxBorderBeamComponent } from '@omnedia/ngx-border-beam';
   templateUrl: './info.component.html',
   styleUrls: ['./info.component.scss'],
   standalone: true,
-  imports: [CommonModule, NgxBorderBeamComponent],
+  imports: [CommonModule],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InfoComponent implements OnInit {

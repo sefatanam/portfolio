@@ -2,7 +2,7 @@
 
 
 <section class="technology_wrapper">
-  <om-border-beam *ngFor="let technology of technologies">
+  <div *ngFor="let technology of technologies">
     <div class="technology_container" >
       <p class="technology_name">{{ technology.type }}</p>
       <ul class="technology_list">
@@ -11,7 +11,7 @@
         </li>
       </ul>
     </div>
-  </om-border-beam>
+  </div>
 </section>
 
 <h1 class="title">Employment History</h1>
@@ -38,9 +38,9 @@
   </div>
 </section>
 
-<h1 class="title">Education</h1>
+<!-- <h1 class="title">Education</h1> -->
 
-<section class="education_wrapper">
+<!-- <section class="education_wrapper">
   <div class="education_container" *ngFor="let education of educations">
     <p class="education_duration">{{ education.duration }}</p>
     <p class="education_degree">
@@ -48,20 +48,20 @@
     </p>
     <p class="education_institute">
       {{ education.instituteName }}
-    </p>
+    </p> -->
     <!-- <p class="education_note">
       {{ education.note }}
     </p> -->
 
-    <ul class="education_list">
+<!--     <ul class="education_list">
       <p class="education_activities">Activities</p>
       <li class="education_listItem" *ngFor="let activity of education.activities">
         {{ activity }}
       </li>
     </ul>
   </div>
-</section>
-
+</section> -->
+<!-- 
 <footer>
   <h1 class="title">Have something so say ?</h1>
   <p>
@@ -70,4 +70,4 @@
     on
     <a href="https://www.linkedin.com/in/SefatAnam/">LinkedIn</a>
   </p>
-</footer>
+</footer> -->
