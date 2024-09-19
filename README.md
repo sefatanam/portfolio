@@ -1,6 +1,7 @@
 # Portfolio
 
 ![License](https://img.shields.io/github/license/sefatanam/portfolio)
+[![Update Angular Action](https://github.com/sefatanam/portfolio/actions/workflows/ng-update.yml/badge.svg)](https://github.com/sefatanam/portfolio/actions/workflows/ng-update.yml)
 
 A simple and clean portfolio to showcase skills, projects, and art, built with Angular.
 
