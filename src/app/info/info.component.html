@@ -2,40 +2,45 @@
 
 
 <section class="technology_wrapper">
-  <div *ngFor="let technology of technologies">
+  @for (technology of technologies; track $index) {
     <div class="technology_container" >
       <p class="technology_name">{{ technology.type }}</p>
       <ul class="technology_list">
-        <li class="technology_listItem" *ngFor="let name of technology.list">
+       @for (name of technology.list; track $index) {
+        <li class="technology_listItem"  >
           {{ name }}
         </li>
+       }
       </ul>
     </div>
-  </div>
+  }
 </section>
 
 <h1 class="title">Employment History</h1>
 
 <section class="employment_history_wrapper">
-  <div class="employment_history_container" *ngFor="let employmentHistory of employmentHistories">
-    <img class="employment_history_image" [src]="employmentHistory.companyLogo" [alt]="employmentHistory.companyName" />
-    <div class="employment_history_information">
-      <p class="employment_history_designation">
-        {{ employmentHistory.designation }}
-      </p>
-      <a class="employment_history_companyName" [href]="employmentHistory.companyUrl">{{ employmentHistory.companyName
-        }}</a>
-      <p class="employment_history_duration">
-        {{ employmentHistory.duration }}
-      </p>
-      <ul class="employment_history_list">
-        <p class="employment_history_intro">CONTRIBUTIONS</p>
-        <li class="employment_history_listItem" *ngFor="let contribute of employmentHistory.contributions">
-          {{ contribute }}
-        </li>
-      </ul>
+  @for (employmentHistory of employmentHistories; track $index) {
+    <div class="employment_history_container">
+      <img class="employment_history_image" [src]="employmentHistory.companyLogo" [alt]="employmentHistory.companyName" />
+      <div class="employment_history_information">
+        <p class="employment_history_designation">
+          {{ employmentHistory.designation }}
+        </p>
+        <a class="employment_history_companyName" [href]="employmentHistory.companyUrl">{{ employmentHistory.companyName
+          }}</a>
+        <p class="employment_history_duration">
+          {{ employmentHistory.duration }}
+        </p>
+        <ul class="employment_history_list">
+          <p class="employment_history_intro">CONTRIBUTIONS</p>
+          <li class="employment_history_listItem" *ngFor="let contribute of employmentHistory.contributions">
+            {{ contribute }}
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
+  }
+  
 </section>
 
 <!-- <h1 class="title">Education</h1> -->

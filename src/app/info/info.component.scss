@@ -32,10 +32,8 @@ $textPrimaryColor:canvastext;
   .technology {
     &_wrapper {
       @include for-web {
-        display              : grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap                  : 2rem;
-        grid-auto-flow       : dense;
+        column-count: 3;
+        column-gap  : 10px;
       }
 
       @include for-phone {
@@ -47,7 +45,7 @@ $textPrimaryColor:canvastext;
 
       om-shine-border {
         display: block;
-        height: min-content;
+        height : min-content;
       }
     }
 
@@ -56,6 +54,10 @@ $textPrimaryColor:canvastext;
       background   : #f9f9f912;
       padding      : 1rem;
       border-radius: 10px;
+      height       : min-content;
+      display      : grid;
+      margin-bottom: 10px;
+      break-inside : avoid;
     }
 
     &_name {
