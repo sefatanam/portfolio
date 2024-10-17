@@ -10,7 +10,8 @@
     "dev:ssr": "ng run portfolio:serve-ssr",
     "serve:ssr": "node dist/portfolio/server/main.js",
     "build:ssr": "ng build && ng run portfolio:server",
-    "prerender": "ng run portfolio:prerender"
+    "prerender": "ng run portfolio:prerender",
+    "preinstall": "npm install --legacy-peer-deps"
   },
   "private": true,
   "dependencies": {
