@@ -1,0 +1,26 @@
+name: Manual Cleanup of Failed Workflows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  delete_failed_workflows:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use the built-in GitHub token for authentication
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2  
+
+      - name: Set up GitHub CLI
+        run: |
+          # Install GitHub CLI and jq for JSON parsing
+          sudo apt-get update
+          sudo apt-get install gh jq
+
+      - name: Delete failed workflows
+        run: |
+          echo "Deleting all failed workflows"
+          # List failed workflows and delete them
+          gh run list --status failure --limit 1000 --json status,headSha | jq -r '.[] | select(.status=="failure") | .id' | xargs -I {} gh run delete {} --confirm

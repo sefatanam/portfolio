@@ -4,7 +4,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Article } from '@interfaces/Article';
 import { DeveloperInformation } from '@interfaces/DeveloperInformation';
 import { UntilDestroy } from '@ngneat/until-destroy';
-import { IntroComponent } from '../components/intro.component';
 
 @UntilDestroy()
 @Component({
@@ -12,7 +11,7 @@ import { IntroComponent } from '../components/intro.component';
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [CommonModule, IntroComponent]
+    imports: [CommonModule]
 })
 export class HomeComponent implements OnInit {
   words = ['Frontend Developer ', 'Angular Developer', 'Typescript', 'Go', 'Nice to meet you!'];
