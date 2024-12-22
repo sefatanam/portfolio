@@ -3,10 +3,9 @@ import { Component, Inject, PLATFORM_ID, input } from '@angular/core';
 import { NgxTypewriterComponent } from '@omnedia/ngx-typewriter';
 
 @Component({
-  selector: 'app-intro',
-  standalone: true,
-  imports: [NgxTypewriterComponent],
-  template: `
+    selector: 'app-intro',
+    imports: [NgxTypewriterComponent],
+    template: `
     @if (isBrowser && words().length) {
       <om-typewriter
         [writeDelay]="50"

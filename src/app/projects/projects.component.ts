@@ -8,11 +8,10 @@ import { Observable } from 'rxjs';
 
 @UntilDestroy()
 @Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss'],
-  standalone: true,
-  imports: [CommonModule]
+    selector: 'app-projects',
+    templateUrl: './projects.component.html',
+    styleUrls: ['./projects.component.scss'],
+    imports: [CommonModule]
 })
 export class ProjectsComponent implements OnInit {
   projects!: Readonly<Project[]>;

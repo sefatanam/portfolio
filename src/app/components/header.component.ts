@@ -4,10 +4,9 @@ import { RouterLink } from "@angular/router";
 import { NavItems } from "@config/navItems";
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [RouterLink, NgFor],
-  template: `
+    selector: 'app-header',
+    imports: [RouterLink, NgFor],
+    template: `
     <header>
   <nav>
     <ul>
@@ -49,7 +48,7 @@ import { NavItems } from "@config/navItems";
   </nav>
 </header>
   `,
-  styles: `
+    styles: `
 
 @import '../../styles/media.scss';
   

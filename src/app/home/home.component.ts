@@ -8,12 +8,11 @@ import { IntroComponent } from '../components/intro.component';
 
 @UntilDestroy()
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
-  imports: [CommonModule, IntroComponent]
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [CommonModule, IntroComponent]
 })
 export class HomeComponent implements OnInit {
   words = ['Frontend Developer ', 'Angular Developer', 'Typescript', 'Go', 'Nice to meet you!'];
