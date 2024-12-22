@@ -6,11 +6,10 @@ import { HeaderComponent } from "./components/header.component";
 import { ResumeComponent } from "./components/resume.component";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [RouterModule, BackgroundComponent, HeaderComponent, ResumeComponent, NgxSpotlightComponent]
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [RouterModule, BackgroundComponent, HeaderComponent, ResumeComponent, NgxSpotlightComponent]
 })
 export class AppComponent {
 
